@@ -1,0 +1,42 @@
+# =============================================================================
+# Feedly KQL Extractor Configuration Template
+# =============================================================================
+#
+# Copy this file to config.yaml and fill in your credentials:
+#   cp config.yaml.template config.yaml
+#
+# Alternatively, set the FEEDLY_API_KEY environment variable or create a .env file.
+#
+# =============================================================================
+
+feedly:
+  # Your Feedly API token (required)
+  # Get your token from: https://feedly.com/v3/auth/dev
+  # Or set FEEDLY_API_KEY environment variable
+  api_token: "YOUR_FEEDLY_API_TOKEN_HERE"
+
+  # Stream IDs to monitor for KQL hunting queries
+  # These should be streams containing Microsoft Sentinel/Defender content
+  stream_ids:
+    - "feed/https://feedly.com/f/YOUR_FEED_ID_HERE"
+    # Add more streams as needed:
+    # - "enterprise/your-org/category/threat-hunting"
+    # - "feed/https://feedly.com/f/another-feed-id"
+
+# =============================================================================
+# Optional Settings
+# =============================================================================
+
+# extraction:
+#   # Maximum articles to process per run
+#   max_articles: 500
+#
+#   # How many hours back to look for articles
+#   since_hours: 24
+
+# output:
+#   # Default output format: json, yaml, markdown, csv, kql
+#   format: "json"
+#
+#   # Default output directory
+#   directory: "./output"

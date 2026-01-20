@@ -1,0 +1,53 @@
+# =============================================================================
+# Feedly KQL Extractor - Git Ignore
+# =============================================================================
+
+# Credentials and secrets - NEVER commit these
+config.yaml
+.env
+*.key
+*.pem
+credentials.json
+
+# Output files
+*.json
+*.yaml
+*.yml
+*.md
+!README.md
+*.csv
+*.kql
+output/
+queries/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Research scripts (not for distribution)
+research_*.py
